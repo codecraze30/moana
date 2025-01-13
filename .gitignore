@@ -1,0 +1,42 @@
+# Ignore virtual environment
+venv/
+.env/
+
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore credentials or sensitive files
+credentials/
+*.json
+
+# Ignore logs and debug files
+*.log
+*.out
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore any temporary or backup files
+*.swp
+*.bak
+*.tmp
+
+# Ignore dependency files (if generated during runtime)
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+*.code-workspace
+
+# Ignore artifacts from testing
+.coverage
+.cache/
+*.pytest_cache/
+
+# Ignore the Chrome-related shell script (if not needed in Git)
+run_chrome.sh
