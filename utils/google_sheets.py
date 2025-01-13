@@ -3,7 +3,7 @@ from google.oauth2.service_account import Credentials
 from datetime import datetime  # Import datetime for current date
 
 # Google Sheets setup
-SERVICE_ACCOUNT_FILE = './credentials/jobs-445608-a6d7ada81826.json'
+SERVICE_ACCOUNT_FILE = os.getenv('GOOGLE_APPLICATION_CREDENTIALS', './credentials.json')
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 client = gspread.authorize(creds)
