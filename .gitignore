@@ -7,10 +7,6 @@ __pycache__/
 *.py[cod]
 *.pyo
 
-# Ignore credentials or sensitive files
-credentials/
-*.json
-
 # Ignore logs and debug files
 *.log
 *.out
