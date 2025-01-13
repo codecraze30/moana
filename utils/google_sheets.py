@@ -9,7 +9,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 client = gspread.authorize(creds)
 
-SHEET_ID = '1vVhDSBAEm4N4keBUXUynTFEGZr9wOtLQGqL_feGFR5c'
+SHEET_ID = os.getenv('SHEET_ID')
 sheet = client.open_by_key(SHEET_ID)
 
 def get_or_create_worksheet(tab_name):

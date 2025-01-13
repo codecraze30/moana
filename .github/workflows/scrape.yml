@@ -27,12 +27,17 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+
       - name: Setup Google credentials
         run: |
           echo "${{ secrets.GOOGLE_CREDENTIALS }}" | base64 --decode > $GITHUB_WORKSPACE/credentials.json
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
+      - name: Setup SHEET_ID
+        env:
+          SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          
       # Step 4: Run the scraper script
       - name: Run scraper
         run: python main.py
